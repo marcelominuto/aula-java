@@ -1,0 +1,30 @@
+<h1>Cadastro Cliente</h1>
+<form action="/cliente-cadatro" method="post">
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input id="nome" name="nome" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF:</label>
+    <input id="cpf" name="cpf" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Enviar!</button>
+</form>
+<hr>
+<table class="table">
+  <thead>
+
+    <tr>
+    		<th>ID</td>
+    		<th>Nome</td>
+    		<th>CPF</td>
+    </tr>
+     </thead>
+  #foreach( $cliente in $clientes )
+    <tr>
+    		<td>$cliente.id</td>
+    		<td>$cliente.nome</td>
+    		<td>$cliente.cnpjCpf</td>
+    </tr>
+  #end
+</table>
